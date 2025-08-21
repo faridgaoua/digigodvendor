@@ -1,13 +1,32 @@
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
+import { Input } from "@/components/ui/input";
+import { Progress } from "@/components/ui/progress";
+import { Textarea } from "@/components/ui/textarea";
+
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-     <Button variant={'destructive'}>
-      Hello from indonesia 
-     </Button>
-     <p className='text-rose-500'>This is Multivendor</p>
-     
+    <div className="p-4">
+      <div className="flex flex-col gap-y-4">
+        <div>
+          <Button variant={'elevated'}>
+            I am a button
+          </Button>
+        </div>
+        <div>
+          <Input placeholder='I am an input' />
+        </div>
+        <div>
+          <Progress value={50} />
+        </div>
+        <div>
+          <Textarea placeholder='I am a textarea'/>
+        </div>
+        <div>
+          <Checkbox />
+        </div>
+      </div>
     </div>
-  );
+  )
 }
